@@ -20,12 +20,13 @@ end
 def literal_aoh
   # Using Array literal syntax only, build a nested array that uses the data in
   # held in the constants
-  people_literal = Array.new
-  people_literal[0] << DON_G[:name][:occupation]
-  people_literal[1] << JOELLE_VD[:name][:occupation]
-  people_literal[2] << PAT_M[:name][:occupation]
-  people_literal[3] << KATE_G[:name][:occupation]
-  people_literal[4] << BRUCE_G[:name][:occupation]
+  people_literal = [
+    {:name => "Don Gately", :occupation => "Live-in Staff"}
+    {:name => "Joelle van Dyne", :occupation => "Radio Personality"}
+    {:name => "Pat Monteseian", :occupation => "Staff"}
+    {:name => "Kate Gompert", :occupation => "None"}
+    {:name => "Bruce Green", :occupation => "Fan of Mildred"}
+  ]
 end
 
 def aoh_lookup(aoh, row, key)
